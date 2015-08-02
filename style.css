@@ -1,0 +1,471 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+svg {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  display: block;
+}
+rect {
+  transform-origin: 50% 50%;
+}
+line {
+/*  transform-origin: 50% 50%;
+*/}
+#seconds, #minutes {
+  transform-origin: 50% 100%;
+}
+#colorbar > div {
+  width: 10%;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+
+#seconds {
+  animation-name: seconds;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#minutes {
+  animation-name: seconds;
+  animation-duration: 3600s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#slide-left {
+  animation-name: slide-left;
+  animation-duration: 1s;
+}
+#slide-right {
+  animation-name: slide-right;
+  animation-duration: 1s;
+}
+#slide-up {
+  animation-name: slide-up;
+  animation-duration: 2s;
+}
+#slide-down {
+  animation-name: slide-down;
+  animation-duration: 2s;
+}
+#spin-in {
+  animation-name: spin-in;
+  animation-duration: 2.5s;
+}
+
+#tri-draw {
+  animation-name: tri-draw;
+  animation-duration: 3s;
+  stroke-dasharray: 145px;
+  stroke-dashoffset: 145px;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#circle-draw {
+  animation-name: circle-draw;
+  animation-duration: 3s;
+  stroke-dasharray: 135px;
+  stroke-dashoffset: 135px;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#x-draw {
+  animation-name: x-draw;
+  animation-duration: 3s;
+  stroke-dasharray: 60px;
+  stroke-dashoffset: 60px;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#square-draw {
+  animation-name: square-draw;
+  animation-duration: 3s;
+  stroke-dasharray: 170px;
+  stroke-dashoffset: 170px;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+
+#tri-fade-in {
+  animation-name: tri-fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#circle-fade-in {
+  animation-name: circle-fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#x-fade-in {
+  animation-name: x-fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#square-fade-in {
+  animation-name: square-fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+#tri-blink-in {
+  animation-name: tri-blink-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#circle-blink-in {
+  animation-name: circle-blink-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#x-blink-in {
+  animation-name: x-blink-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+#square-blink-in {
+  animation-name: square-blink-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+
+@keyframes tri-draw {
+  0% {
+    stroke-dashoffset: 145px;
+  }
+  20% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes circle-draw {
+  0% {
+    stroke-dashoffset: 135px;
+  }
+  5% {
+    stroke-dashoffset: 135px;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }  
+}
+@keyframes x-draw {
+  0% {
+    stroke-dashoffset: 60px;
+  }
+  10% {
+    stroke-dashoffset: 60px;
+  }
+  30% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }  
+}
+@keyframes square-draw {
+  0% {
+    stroke-dashoffset: 170px;
+  }
+  15% {
+    stroke-dashoffset: 170px;
+  }
+  35% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }  
+}
+
+@keyframes tri-fade-in {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes circle-fade-in {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+@keyframes x-fade-in {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+@keyframes square-fade-in {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+
+@keyframes tri-blink-in {
+  0% {
+    opacity: 0;
+  }
+  19% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  31% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes circle-blink-in {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  16% {
+    opacity: 0;
+  }
+  24% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  31% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  37% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+@keyframes x-blink-in {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  19% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+@keyframes square-blink-in {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  16% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 0;
+  }
+  27% {
+    opacity: 0;
+  }
+  28% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  31% {
+    opacity: 0;
+  }
+  34% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }  
+}
+
+
+@keyframes seconds {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes minutes {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slide-left {
+  10% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-right {
+  10% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide-up {
+  40% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes slide-down {
+  40% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes spin-in {
+  40% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(0);
+  }
+}
