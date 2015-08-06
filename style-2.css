@@ -6,6 +6,9 @@ svg {
 	height: 100vh;
 	width: 100%;
 }
+svg * {
+	animation-iteration-count: infinite;
+}
 div {
 	width: 100vw;
 	min-height: 100vh;
@@ -67,63 +70,169 @@ div {
   animation-timing-function: ease-out;
 }
 
-.codec:nth-child(1) {
-	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -0s;
-	animation-timing-function: steps(1);
-}
-.codec:nth-child(2) {
-	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -.05s;
-	animation-timing-function: steps(1);	
-}
-.codec:nth-child(3) {
-	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -.1s;
-	animation-timing-function: steps(1);	
-}
-.codec:nth-child(4) {
-	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -.15s;
-	animation-timing-function: steps(1);	
-}
-.codec:nth-child(5) {
-	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -.2s;
-	animation-timing-function: steps(1);	
-}
-.codec:nth-child(6) {
-	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -.25s;
-	animation-timing-function: steps(1);	
-}
-.codec:nth-child(7) {
-	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -.3s;
-	animation-timing-function: steps(1);	
+.codec:nth-child(9) {
+  animation-delay: 0.2s;
 }
 .codec:nth-child(8) {
-	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -.35s;
-	animation-timing-function: steps(1);	
+  animation-delay: .25s;	
 }
-.codec:nth-child(9) {
+.codec:nth-child(7) {
+  animation-delay: .3s;	
+}
+.codec:nth-child(6) {
+  animation-delay: .35s;	
+}
+.codec:nth-child(5) {
+  animation-delay: .4s;	
+}
+.codec:nth-child(4) {
+  animation-delay: .45s;	
+}
+.codec:nth-child(3) {
+  animation-delay: .5s;	
+}
+.codec:nth-child(2) {
+  animation-delay: .55s;	
+}
+.codec:nth-child(1) {
+  animation-delay: .6s;
+}
+.codec {
 	animation-name: codec;
-  animation-duration: .6s;
-  animation-delay: -.4s;
-	animation-timing-function: steps(1);
+  animation-duration: 1s;
+	animation-timing-function: steps(1, start);
 }
 .codec:hover {
 	stroke: #E6E6E6;
 	fill: #E6E6E6;
+}
+
+.circle:nth-child(1) {
+	animation-delay: -.1s;
+}
+.circle:nth-child(2) {
+	animation-delay: -.2s;
+}
+.circle:nth-child(3) {
+	animation-delay: -.3s;
+}
+.circle:nth-child(4) {
+	animation-delay: -.4s;
+}
+.circle:nth-child(5) {
+	animation-delay: -.5s;
+}
+.circle:nth-child(6) {
+	animation-delay: -.6s;
+}
+.circle {
+	animation-name: circles;
+	animation-duration: 2s;
+	stroke-width: 2px;
+	animation-iteration-count: infinite;
+}
+#line-box * {
+	animation-duration: 2s;
+}
+.box-line:nth-child(1), .box-line:nth-child(2) {
+	animation-name: box-line1;
+}
+.box-line:nth-child(3), .box-line:nth-child(4) {
+	animation-name: box-line2;
+}
+.box-line:nth-child(5), .box-line:nth-child(6) {
+	animation-name: box-line3;
+}
+.box-line:nth-child(7), .box-line:nth-child(8) {
+	animation-name: box-line4;
+}
+.box-box:nth-child(9) {
+	animation-name: box-box1;
+}
+.box-box:nth-child(10) {
+	animation-name: box-box2;
+}
+
+@keyframes box-line1 {
+	0% {
+		transform: translateX(-300px) translateY(-300px);
+	}
+	50% {
+		transform: translateX(0) translateY(0);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+@keyframes box-line2 {
+	0% {
+		transform: translateX(-300px) translateY(300px);
+	}
+	50% {
+		transform: translateX(0) translateY(0);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+@keyframes box-line3 {
+	0% {
+		transform: translateX(300px) translateY(300px);
+	}
+	50% {
+		transform: translateX(0) translateY(0);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+@keyframes box-line4 {
+	0% {
+		transform: translateX(300px) translateY(-300px);
+	}
+	50% {
+		transform: translateX(0) translateY(0);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+@keyframes box-box1 {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes box-box2 {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes circles {
+	0%, 100% {
+		stroke-width: 2px;
+	}
+	50% {
+		stroke-width: 10px;
+	}
 }
 
 @keyframes codec {
@@ -149,37 +258,37 @@ div {
 		stroke-dashoffset: 0;
 		opacity: 1;
 	}
-	51% {
+	50.0001% {
 		opacity: 0;
 	}
 	53% {
 		opacity: 0;
 	}
-	54% {
+	53.0001% {
 		opacity: 1;
 	}
 	56% {
 		opacity: 1;
 	}
-	57% {
+	56.0001% {
 		opacity: 0;
 	}
 	59% {
 		opacity: 0;
 	}
-	60% {
+	59.0001% {
 		opacity: 1;
 	}
 	62% {
 		opacity: 1;
 	}
-	63% {
+	62.0001% {
 		opacity: 0;
 	}
 	65% {
 		opacity: 0;
 	}
-	66% {
+	65.0001% {
 		opacity: 1;
 	}
 	68% {
@@ -206,34 +315,37 @@ div {
 	51% {
 		opacity: 0;
 	}
+	50.0001% {
+		opacity: 0;
+	}
 	53% {
 		opacity: 0;
 	}
-	54% {
+	53.0001% {
 		opacity: 1;
 	}
 	56% {
 		opacity: 1;
 	}
-	57% {
+	56.0001% {
 		opacity: 0;
 	}
 	59% {
 		opacity: 0;
 	}
-	60% {
+	59.0001% {
 		opacity: 1;
 	}
 	62% {
 		opacity: 1;
 	}
-	63% {
+	62.0001% {
 		opacity: 0;
 	}
 	65% {
 		opacity: 0;
 	}
-	66% {
+	65.0001% {
 		opacity: 1;
 	}
 	68% {
@@ -257,34 +369,37 @@ div {
 	51% {
 		opacity: 0;
 	}
+	50.0001% {
+		opacity: 0;
+	}
 	53% {
 		opacity: 0;
 	}
-	54% {
+	53.0001% {
 		opacity: 1;
 	}
 	56% {
 		opacity: 1;
 	}
-	57% {
+	56.0001% {
 		opacity: 0;
 	}
 	59% {
 		opacity: 0;
 	}
-	60% {
+	59.0001% {
 		opacity: 1;
 	}
 	62% {
 		opacity: 1;
 	}
-	63% {
+	62.0001% {
 		opacity: 0;
 	}
 	65% {
 		opacity: 0;
 	}
-	66% {
+	65.0001% {
 		opacity: 1;
 	}
 	68% {
@@ -308,34 +423,37 @@ div {
 	51% {
 		opacity: 0;
 	}
+	50.0001% {
+		opacity: 0;
+	}
 	53% {
 		opacity: 0;
 	}
-	54% {
+	53.0001% {
 		opacity: 1;
 	}
 	56% {
 		opacity: 1;
 	}
-	57% {
+	56.0001% {
 		opacity: 0;
 	}
 	59% {
 		opacity: 0;
 	}
-	60% {
+	59.0001% {
 		opacity: 1;
 	}
 	62% {
 		opacity: 1;
 	}
-	63% {
+	62.0001% {
 		opacity: 0;
 	}
 	65% {
 		opacity: 0;
 	}
-	66% {
+	65.0001% {
 		opacity: 1;
 	}
 	68% {
@@ -359,34 +477,37 @@ div {
 	51% {
 		opacity: 0;
 	}
+	50.0001% {
+		opacity: 0;
+	}
 	53% {
 		opacity: 0;
 	}
-	54% {
+	53.0001% {
 		opacity: 1;
 	}
 	56% {
 		opacity: 1;
 	}
-	57% {
+	56.0001% {
 		opacity: 0;
 	}
 	59% {
 		opacity: 0;
 	}
-	60% {
+	59.0001% {
 		opacity: 1;
 	}
 	62% {
 		opacity: 1;
 	}
-	63% {
+	62.0001% {
 		opacity: 0;
 	}
 	65% {
 		opacity: 0;
 	}
-	66% {
+	65.0001% {
 		opacity: 1;
 	}
 	68% {
